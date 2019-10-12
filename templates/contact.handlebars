@@ -1,0 +1,37 @@
+<div class="image-container {{bg_img_class}}">
+    <div class="container">
+        <h2 class="contact-title">{{title}}</h2>
+        <div class="reach-me">
+            {{#each reach_me}}<div class="contact-card">
+                <div class="card-icon">
+                    <span class="{{this.icon_class}}"></span>
+                </div>
+                <div class="card-title">{{this.text}}</div>
+                <div class="card-desc">{{this.description}}</div>
+            </div>{{/each}}
+        </div>
+        <div class="contact-form-container">
+            <div class="contact-form">
+                <div class="submit-msg hide">{{error_msg}}</div>
+                <div class="contact-first-name"><input type="text" placeholder="{{input_box_hint.[0]}}" required></div>
+                <div class="contact-last-name"><input type="text" placeholder="{{input_box_hint.[1]}}" required></div>
+                <div class="contact-email"><input type="email" name="name" placeholder="{{input_box_hint.[2]}}" required></div>
+                <div class="contact-msg"><textarea name="name" rows="6" placeholder="{{input_box_hint.[3]}}"></textarea></div>
+                <div class="contact-send-button"><button id="send-button">{{send_btn}}</button></div>
+            </div>
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="page-footer">
+                <div class="copyright"><span>{{copyright}}</span></div>
+                <div class="social-media">
+                    <ul>
+                        {{#each social_icons}}<li class="{{this.icon_class}}"><a target="_blank" href="{{this.link}}"></a></li>{{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

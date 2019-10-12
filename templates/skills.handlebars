@@ -1,0 +1,25 @@
+<div class="container">
+    <div id="technical">
+        <h2 class="heading">{{technical_heading}}</h2>
+        <div class="technical-container">
+            {{#each technical}}<div class="progress">
+                <div class="name">{{this.name}}</div>
+                <div class="value">{{this.value}}%</div>
+                <div class="progress-bar">
+                    <div class="filled-bar" style="width: {{this.value}}%"></div>
+                </div>
+            </div>{{/each}}
+        </div>
+    </div>
+    <div id="professional">
+        <h2 class="heading">{{professional_heading}}</h2>
+        <div class="professional-container">
+            {{#each professional}}<div class="circle-container">
+                <div class="circle">
+                    <div class="value">{{this.value}}%</div>
+                </div>
+                <div class="name">{{this.name}}</div>
+            </div>{{/each}}
+        </div>
+    </div>
+</div>

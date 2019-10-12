@@ -1,0 +1,10 @@
+<nav class="nav-container">
+    <button class="toggle-btn"><span class="ham"></span></button>
+    <div class="overlay"></div>
+    <ul>
+        {{#each links}}
+        <li class="{{#if @first}}selected{{/if}}"><a class="navlink" href="#{{this}}">{{this}}</a></li>
+        {{/each}}
+    </ul>
+    <div class="theme-changer"><button class="{{icon_class}}"></button></div>
+</nav>

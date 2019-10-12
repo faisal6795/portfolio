@@ -1,0 +1,10 @@
+<div class="container">
+    <h2 class="title">{{title}}</h2>
+    <div id="cards-container">
+        {{#each tasks}} <div class="card">
+            <span class="icon-bg {{this.icon_class}}"></span>
+            <h6 class="header">{{this.heading}}</h6>
+            <p class="description">{{this.description}}</p>
+        </div>{{/each}}
+    </div>
+</div>

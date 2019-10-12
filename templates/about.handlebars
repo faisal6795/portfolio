@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="about-image">
+        <img src="{{img_src}}" alt="{{img_alt}}">
+    </div>
+    <div class="about-me">
+        <h2 class="about-title">{{title}}</h2>
+        <p class="about-desc">{{description}}</p>
+        <div class="prog-languages">
+            <ul>{{#each languages}}<li>{{this}}</li>{{/each}}</ul>
+        </div>
+        <div class="download-btn">
+            <button>
+                <span>{{download_btn}}</span>
+                <span class="{{download_icon_class}}"></span>
+            </button>
+        </div>
+    </div>
+</div>

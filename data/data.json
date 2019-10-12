@@ -1,0 +1,300 @@
+{
+    "sections": [
+        "navbar",
+        "home",
+        "about",
+        "service",
+        "skills",
+        "experience",
+        "project",
+        "contact"
+    ],
+    "navbar": {
+        "links": [
+            "home",
+            "about",
+            "skills",
+            "experience",
+            "project",
+            "contact"
+        ],
+        "icon_class": "icon theme"
+    },
+    "home": {
+        "hello": "Hello I'm",
+        "name": "Faisal Ansari",
+        "position": "Frontend Developer",
+        "details": [
+            {
+                "class": "icon email",
+                "link": "mailto:faisal.faiz.ansari@gmail.com",
+                "text": "faisal.faiz.ansari@gmail.com"
+            },
+            {
+                "class": "icon phone",
+                "link": "callto:+918976513089",
+                "text": "+91 89765 13089"
+            },
+            {
+                "class": "icon location",
+                "link": "https://goo.gl/maps/E94R9TG9UUuimdGR7",
+                "text": "Nerul Navi Mumbai, Maharashtra, India"
+            }
+        ],
+        "image_url": "assets/pic.jpeg",
+        "image_alt_text": "profile image",
+        "social": [
+            {
+                "class": "icon github",
+                "link": "https://github.com/faisal6795"
+            },
+            {
+                "class": "icon insta",
+                "link": "https://www.instagram.com/thefaisalansari/"
+            },
+            {
+                "class": "icon linkedin",
+                "link": "https://www.linkedin.com/in/faisal-ansari/"
+            }
+        ]
+    },
+    "about": {
+        "title": "About Me",
+        "img_src": "assets/about.png",
+        "img_alt": "developer cartoon",
+        "description": "Hello, I am Faisal, frontend web developer based in Navi Mumbai. I have rich experience in web development, building web apps and customizations. Also I am good at",
+        "languages": [
+            "Javascript",
+            "Angular",
+            "BackboneJS",
+            "HTML",
+            "CSS",
+            "Android"
+        ],
+        "download_btn": "Download CV",
+        "download_icon_class": "icon download"
+    },
+    "service": {
+        "title": "What I do",
+        "tasks": [
+            {
+                "icon_class": "icon ui-icon",
+                "heading": "UI Development",
+                "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt."
+            },
+            {
+                "icon_class": "icon code-icon",
+                "heading": "Web Development",
+                "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt."
+            },
+            {
+                "icon_class": "icon app-icon",
+                "heading": "App Development",
+                "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt."
+            }
+        ]
+    },
+    "skills": {
+        "technical_heading": "Technical Skills",
+        "professional_heading": "Professional Skills",
+        "technical": [
+            {
+                "name": "Javascript",
+                "value": 80
+            },
+            {
+                "name": "Angular",
+                "value": 80
+            },
+            {
+                "name": "Web Development",
+                "value": 70
+            },
+            {
+                "name": "Android Development",
+                "value": 60
+            },
+            {
+                "name": "BackboneJS",
+                "value": 80
+            }
+        ],
+        "professional": [
+            {
+                "name": "Project Management",
+                "value": 85
+            },
+            {
+                "name": "Communication",
+                "value": 95
+            },
+            {
+                "name": "Team Work",
+                "value": 90
+            },
+            {
+                "name": "Creativity",
+                "value": 85
+            }
+        ]
+    },
+    "experience": {
+        "education_heading": "Education",
+        "experience_heading": "Work Experience",
+        "education": [
+            {
+                "course": "Computer Engineering, ",
+                "name": "M. H. Saboo Siddik College, Byculla",
+                "year": "2013-2017",
+                "description": "Hi, my name is faisal ansari."
+            },
+            {
+                "course": "Junior College (Computer Science), ",
+                "name": "MGM College, Nerul Navi Mumbai",
+                "year": "2011-2013",
+                "description": ""
+            },
+            {
+                "course": "High School, ",
+                "name": "St. Xavier's High School, Nerul Navi Mumbai",
+                "year": "2001-2011",
+                "description": ""
+            }
+        ],
+        "work": [
+            {
+                "project": "Annotate in ",
+                "company": "Zeus Learning",
+                "year": "2017-2018",
+                "responsibility": "Responsibility:",
+                "responsibilities": [
+                    "Validate CSS",
+                    "Project Management"
+                ]
+            },
+            {
+                "project": "Imagine Learning in ",
+                "company": "Zeus Learning",
+                "year": "2018",
+                "responsibility": "Responsibility:",
+                "responsibilities": [
+                    "Validate CSS",
+                    "Project Management"
+                ]
+            },
+            {
+                "project": "MC Graw Hill Education in ",
+                "company": "Zeus Learning",
+                "year": "2018-2019",
+                "responsibility": "Responsibility:",
+                "responsibilities": [
+                    "Validate CSS",
+                    "Project Management"
+                ]
+            }
+        ]
+    },
+    "project": {
+        "title": "Recent Projects",
+        "list_items": [
+            {
+                "name": "All Categories",
+                "data_name": "*"
+            },
+            {
+                "name": "Apps",
+                "data_name": "app"
+            },
+            {
+                "name": "Games",
+                "data_name": "game"
+            },
+            {
+                "name": "Visual Illustration",
+                "data_name": "visual"
+            }
+        ],
+        "list_cards": [
+            {
+                "name": "Tic Tac Toe",
+                "url": "https://faisal6795.github.io/tictactoe",
+                "class_name": "game",
+                "img_class": "tictactoe",
+                "height": "350",
+                "icon_class_name": "icon search",
+                "desc": "Game"
+            },
+            {
+                "name": "Curis",
+                "url": "https://play.google.com/store/apps/details?id=com.faisalansari.curis&hl=en",
+                "class_name": "app",
+                "img_class": "curis",
+                "height": "240",
+                "icon_class_name": "icon search",
+                "desc": "App"
+            },
+            {
+                "name": "Snake",
+                "url": "https://faisal6795.github.io/snake",
+                "class_name": "game",
+                "img_class": "snake",
+                "height": "300",
+                "icon_class_name": "icon search",
+                "desc": "Game"
+            },
+            {
+                "name": "Sorting Algorithms",
+                "url": "",
+                "class_name": "visual",
+                "img_class": "",
+                "height": "240",
+                "icon_class_name": "icon search",
+                "desc": "Visual Illustration"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contact Me",
+        "bg_img_class": "",
+        "reach_me": [
+            {
+                "icon_class": "icon navigation",
+                "text": "Address",
+                "description": "Nerul Navi Mumbai"
+            },
+            {
+                "icon_class": "icon email",
+                "text": "Email",
+                "description": "faisal.faiz.ansari@gmail.com"
+            },
+            {
+                "icon_class": "icon phone",
+                "text": "Phone",
+                "description": "+91 89765 13089"
+            }
+        ],
+        "input_box_hint": [
+            "First Name",
+            "Last Name",
+            "Your Email",
+            "Your Message"
+        ],
+        "error_msg": "Did you fill the form properly?",
+        "send_btn": "Send Message",
+        "copyright": "All rights reserved Faisal Ansari @ 2019",
+        "social_icons": [
+            {
+                "icon_class": "icon github",
+                "link": "https://github.com/faisal6795"
+            },
+            {
+                "icon_class": "icon insta",
+                "link": "https://www.instagram.com/thefaisalansari/"
+            },
+            {
+                "icon_class": "icon linkedin",
+                "link": "https://www.linkedin.com/in/faisal-ansari/"
+            }
+        ]
+    }
+}
