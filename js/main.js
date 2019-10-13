@@ -32,6 +32,16 @@ function initialize() {
         $("#navbar .navlink").click(function (event) {
             $("#navbar .navlink").closest("li").removeClass("selected");
             $(event.target).closest("li").addClass("selected");
+
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    window.location.hash = hash;
+                });
+            }
             closeNavBar();
         });
 
@@ -47,6 +57,10 @@ function initialize() {
             } else {
                 openNavBar();
             }
+        });
+
+        $(".overlay").click(function (event) {
+            closeNavBar();
         });
 
         $("#navbar .theme-changer button").click(function (event) {

@@ -3,8 +3,8 @@ body {
   background-color: #100e17;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -103,8 +103,8 @@ section {
     background-color: #2196f3;
     z-index: 4;
     left: -250px;
-    -webkit-transition: left 0.5s;
-    transition: left 0.5s;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out;
   }
   #navbar .nav-container ul.nav-open {
     left: 0;
@@ -168,8 +168,8 @@ section {
     height: 2px;
     background-color: #fff;
     border-radius: 2px;
-    -webkit-transition: background-color 0.5s;
-    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
   }
   #navbar .nav-container .toggle-btn span::before, #navbar .nav-container .toggle-btn span::after {
     content: "";
@@ -182,10 +182,10 @@ section {
     vertical-align: middle;
     background-color: #fff;
     border-radius: 2px;
-    -webkit-transition: top 0.5s, -webkit-transform 0.5s;
-    transition: top 0.5s, -webkit-transform 0.5s;
-    transition: top 0.5s, transform 0.5s;
-    transition: top 0.5s, transform 0.5s, -webkit-transform 0.5s;
+    -webkit-transition: top 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   }
   #navbar .nav-container .toggle-btn span::before {
     top: -5px;
