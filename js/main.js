@@ -6,12 +6,12 @@ function initialize() {
         initializeElements();
     });
 
-    function renderTemplates(templateName, index, target, jsonData) {
+    function renderTemplates(templateName, index, length, target, jsonData) {
         $.get('templates/' + templateName + '.handlebars', function (data) {
             var template = Handlebars.compile(data);
             $(target).html(template(jsonData));
         }, 'html').promise().done(function () {
-            if (index === 8) {
+            if (index === length - 1) {
                 bindEvents();
                 initMap();
             }
@@ -63,8 +63,9 @@ function initialize() {
     }
 
     function initializeElements() {
+        var length = JSONData.sections.length;
         JSONData.sections.forEach(function (data, index) {
-            renderTemplates(data, index, '#' + data, JSONData[data]);
+            renderTemplates(data, index, length, '#' + data, JSONData[data]);
         });
     }
 
