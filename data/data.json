@@ -71,6 +71,8 @@
             "CSS",
             "Android"
         ],
+        "download_link": "/assets/cv.pdf",
+        "download_text": "Faisal Ansari CV",
         "download_btn": "Download CV",
         "download_icon_class": "icon download"
     },
@@ -280,6 +282,7 @@
             "Your Message"
         ],
         "error_msg": "Did you fill the form properly?",
+        "success_msg": "Message Sent!",
         "send_btn": "Send Message",
         "copyright": "All rights reserved Faisal Ansari @ 2019",
         "social_icons": [

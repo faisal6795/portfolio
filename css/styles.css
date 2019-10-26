@@ -3,8 +3,8 @@ body {
   background-color: #100e17;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -74,6 +74,8 @@ section {
 
 #portfolio {
   min-width: 360px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 /* ---------------------navbar----------------- */
@@ -103,8 +105,8 @@ section {
     background-color: #2196f3;
     z-index: 4;
     left: -250px;
-    -webkit-transition: left 0.5s ease-in-out;
-    transition: left 0.5s ease-in-out;
+    -webkit-transition: left 0.5s ease;
+    transition: left 0.5s ease;
   }
   #navbar .nav-container ul.nav-open {
     left: 0;
@@ -168,8 +170,8 @@ section {
     height: 2px;
     background-color: #fff;
     border-radius: 2px;
-    -webkit-transition: background-color 0.5s ease-in-out;
-    transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
   }
   #navbar .nav-container .toggle-btn span::before, #navbar .nav-container .toggle-btn span::after {
     content: "";
@@ -182,10 +184,8 @@ section {
     vertical-align: middle;
     background-color: #fff;
     border-radius: 2px;
-    -webkit-transition: top 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-    transition: top 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-    transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
-    transition: top 0.5s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
   #navbar .nav-container .toggle-btn span::before {
     top: -5px;
@@ -204,6 +204,8 @@ section {
   z-index: 1;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .nav-container button {
@@ -442,6 +444,8 @@ section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
+  -webkit-transition: border 0.5s ease;
+  transition: border 0.5s ease;
 }
 
 #home .profile-pic .img-border .image {
@@ -454,6 +458,8 @@ section {
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: border 0.5s ease;
+  transition: border 0.5s ease;
 }
 
 @media screen and (min-width: 768px) and (max-width: 850px) {
@@ -529,7 +535,7 @@ section {
   margin-top: 20px;
 }
 
-#about .download-btn button {
+#about .download-btn a {
   padding: 12px 30px;
   background-color: #2196f3;
   border-radius: 20px;
@@ -540,7 +546,7 @@ section {
   cursor: pointer;
 }
 
-#about .download-btn button span + span {
+#about .download-btn a span + span {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -564,6 +570,10 @@ section {
   background-color: #202026;
   -webkit-box-shadow: -7px 7px 20px #000;
           box-shadow: -7px 7px 20px #000;
+  -webkit-transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
 }
 
 #service .card:not(:last-child) {
@@ -678,7 +688,57 @@ section {
   position: relative;
 }
 
-#skills .circle:before {
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#skills .circle .fill {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  clip: rect(0, 50px, 100px, 0);
+  background: red;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: rotating 2s linear infinite;
+          animation: rotating 2s linear infinite;
+}
+
+#skills .circle .mask {
+  position: absolute;
+  clip: rect(0, 100px, 100px, 50px);
+  background-color: #7d7d80;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+#skills .circle:after {
   content: "";
   width: 88px;
   height: 88px;
@@ -690,6 +750,8 @@ section {
           transform: translate(-50%, -50%);
   background-color: #100e17;
   border-radius: 50%;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
 #skills #professional {
@@ -701,6 +763,7 @@ section {
   position: relative;
   font-size: 16px;
   font-weight: bold;
+  z-index: 1;
 }
 
 #skills #professional .name {
@@ -771,6 +834,10 @@ section {
   font-size: 14px;
   font-weight: bold;
   border-radius: 4px;
+  -webkit-transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
 }
 
 #experience .education-name {
@@ -978,6 +1045,10 @@ section {
   -webkit-box-shadow: -1rem 0 3rem #000;
           box-shadow: -1rem 0 3rem #000;
   background-color: #202026;
+  -webkit-transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
 }
 
 #contact .reach-me .contact-card .card-icon {
@@ -999,6 +1070,8 @@ section {
   top: 50%;
   left: 50%;
   position: absolute;
+  -webkit-transition: background-image 0.5s ease;
+  transition: background-image 0.5s ease;
 }
 
 #contact .reach-me .contact-card .card-title {
@@ -1080,10 +1153,9 @@ section {
 }
 
 #contact .contact-form .submit-msg {
-  margin-top: 20px;
+  padding: 0;
   font-size: 22px;
   line-height: 30px;
-  margin-bottom: 30px;
   text-align: center;
   font-weight: bold;
   color: #dc3545;
@@ -1102,7 +1174,6 @@ section {
   border: 0;
   color: #fff;
   cursor: pointer;
-  opacity: 0.65;
   background-color: #2196f3;
 }
 
@@ -1161,7 +1232,7 @@ section {
 }
 
 #contact .page-footer .social-media {
-  padding-left: 8px;
+  padding-left: 22px;
 }
 
 #contact .page-footer .social-media li {
@@ -1202,7 +1273,7 @@ section {
 }
 
 .download {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA1klEQVRIS+3VMQrCQBCF4f8V1lpaiF5CsNHSztLO89lZ2lhrKd5BsbASbzASQUk2ye4mSkBIumRn37eEmUR4LjObAntfDTCTdCirUQu0r+iPusjMlsDYadsBsArMwRq4OjVHSZvk2WcOzKwL7IBJIDC0fALmku4ZILn5AZIJzwFfIrnwQqAmUhheClRESsO9QCTiDQ8CASQYHgWUIFHh0YCDdNJ9HhoK7w/H3WxmvdeppEco+L1eCYgNTdc1B5jZFujXOWXBnpukhfuxOwPDHwEXSaNGgCctEncZPQQibwAAAABJRU5ErkJggg==");
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAHdElNRQfjChEQLwduT+VpAAAAoElEQVRIx+3UMQ6CQBBG4bdEOw5AQSEJpcfwLJYexpKeG9FBQssdLMZCQ1AG2FksJOHvdrPvKxeUSSnaSu1txMrtwA78BHAAcuROPrg9kyhvO6rBqeHmHv1JUqnFslZOX7yJGOcmQs+9ienci5jPF4nlfJbwyycJ/1wlbPmIsOcfRFjeE+H5m0hX5NvY60PJKALaq2vhAEDMJQCI4R8+1SfdJHFEo1hA1gAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOS0xMC0xN1QxNjo0NzowNyswMDowMGFifaEAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTktMTAtMTdUMTY6NDc6MDcrMDA6MDAQP8UdAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==");
 }
 
 .insta {

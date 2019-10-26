@@ -72,7 +72,39 @@ function initialize() {
         });
 
         $("#send-button").click(function (event) {
-
+            var firstName = $(".contact-first-name input").val(),
+                lastName = $(".contact-last-name input").val(),
+                email = $(".contact-email input").val(),
+                msg = $(".contact-msg textarea").val(),
+                name = firstName + " " + lastName,
+                isValid = function (firstName, lastName, email, msg) {
+                    return firstName.trim() !== "" && lastName.trim() !== "" && msg.trim() !== "" && /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+                },
+                showError = function () {
+                    $(".submit-msg").text(JSONData.contact.error_msg);
+                    $(".submit-msg").removeClass("hide").removeClass("correct");
+                },
+                showSuccess = function () {
+                    $(".contact-form textarea").val("");
+                    $(".submit-msg").text(JSONData.contact.success_msg);
+                    $(".submit-msg").removeClass("hide").addClass("correct");
+                };
+            if (isValid(firstName, lastName, email, msg)) {
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "faisal.faizansari@gmail.com",
+                    Password: "rmfdxngxiqltrybp",
+                    To: "faisal.faizansari@gmail.com",
+                    From: email,
+                    Subject: "Message from " + name,
+                    Body: msg
+                }).then(function (message) {
+                    console.log(message);
+                });
+                showSuccess();
+            } else {
+                showError();
+            }
         });
     }
 
