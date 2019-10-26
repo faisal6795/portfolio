@@ -85,7 +85,7 @@ function initialize() {
                     $(".submit-msg").removeClass("hide").removeClass("correct");
                 },
                 showSuccess = function () {
-                    $(".contact-form textarea").val("");
+                    $(".contact-form > div > *[required]").val("");
                     $(".submit-msg").text(JSONData.contact.success_msg);
                     $(".submit-msg").removeClass("hide").addClass("correct");
                 };

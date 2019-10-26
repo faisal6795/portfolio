@@ -102,19 +102,19 @@
         "technical": [
             {
                 "name": "Javascript",
-                "value": 80
+                "value": 85
             },
             {
                 "name": "Angular",
                 "value": 80
             },
             {
-                "name": "Web Development",
-                "value": 70
-            },
-            {
                 "name": "Android Development",
                 "value": 60
+            },
+            {
+                "name": "Web Development",
+                "value": 70
             },
             {
                 "name": "BackboneJS",
@@ -123,20 +123,20 @@
         ],
         "professional": [
             {
+                "name": "Communication",
+                "value": 75
+            },
+            {
                 "name": "Project Management",
                 "value": 85
             },
             {
-                "name": "Communication",
-                "value": 95
-            },
-            {
                 "name": "Team Work",
-                "value": 90
+                "value": 80
             },
             {
                 "name": "Creativity",
-                "value": 85
+                "value": 75
             }
         ]
     },

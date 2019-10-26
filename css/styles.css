@@ -640,23 +640,112 @@ section {
   font-weight: bold;
 }
 
-#skills .progress-bar {
+#skills #technical .technical-container .progress {
+  margin-bottom: 22px;
+  line-height: 24px;
+}
+
+#skills #technical .technical-container .progress .progress-bar {
   width: 100%;
   height: 7px;
-  background-color: rgba(199, 198, 198, 0.6);
+  background-color: #ddd;
   border-radius: 10px;
   margin-top: 5px;
 }
 
-#skills .filled-bar {
+#skills #technical .technical-container .progress .progress-bar .filled-bar {
   background-color: #2196f3;
   height: 100%;
   border-radius: 10px;
+  -webkit-animation: fillBar 3s linear;
+          animation: fillBar 3s linear;
 }
 
-#skills .progress {
-  margin-bottom: 22px;
-  line-height: 24px;
+@-webkit-keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+#skills #technical .technical-container .progress:nth-child(1) .progress-bar .filled-bar {
+  -webkit-animation: fillBar1 3s linear;
+          animation: fillBar1 3s linear;
+}
+
+@-webkit-keyframes fillBar1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+@keyframes fillBar1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+#skills #technical .technical-container .progress:nth-child(3) .progress-bar .filled-bar {
+  -webkit-animation: fillBar3 3s linear;
+          animation: fillBar3 3s linear;
+}
+
+@-webkit-keyframes fillBar3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes fillBar3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+#skills #technical .technical-container .progress:nth-child(4) .progress-bar .filled-bar {
+  -webkit-animation: fillBar4 3s linear;
+          animation: fillBar4 3s linear;
+}
+
+@-webkit-keyframes fillBar4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes fillBar4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
 }
 
 #skills .professional-container {
@@ -678,67 +767,109 @@ section {
   }
 }
 
-#skills .circle {
+#skills .professional-container .circle-container .circle {
   width: 100px;
   height: 100px;
   margin-bottom: 10px;
   display: inline-block;
-  background-color: rgba(199, 198, 198, 0.6);
+  background-color: #ddd;
   border-radius: 50%;
   position: relative;
 }
 
-@-webkit-keyframes rotating {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+#skills .professional-container .circle-container .circle .mask {
+  position: absolute;
+  background-color: #ddd;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  clip: rect(0, 100px, 100px, 50px);
 }
 
-@keyframes rotating {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-#skills .circle .fill {
+#skills .professional-container .circle-container .circle .mask .fill {
+  clip: rect(0, 50px, 100px, 0);
   width: 100%;
   height: 100%;
   position: absolute;
-  clip: rect(0, 50px, 100px, 0);
-  background: red;
+  background-color: #2196f3;
   left: 0;
   top: 0;
   border-radius: 50%;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-animation: rotating 2s linear infinite;
-          animation: rotating 2s linear infinite;
+  -webkit-animation: rotateLeft 1.5s linear;
+          animation: rotateLeft 1.5s linear;
 }
 
-#skills .circle .mask {
-  position: absolute;
+#skills .professional-container .circle-container .circle .mask.right {
+  clip: rect(0, 50px, 100px, 0);
+}
+
+#skills .professional-container .circle-container .circle .mask.right .fill {
   clip: rect(0, 100px, 100px, 50px);
-  background-color: #7d7d80;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
+  -webkit-transform: rotate(calc(360deg * 75 / 100 - 180deg));
+          transform: rotate(calc(360deg * 75 / 100 - 180deg));
+  -webkit-animation: rotateRight 3s linear;
+          animation: rotateRight 3s linear;
 }
 
-#skills .circle:after {
+@-webkit-keyframes rotateLeft {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateLeft {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes rotateRight {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(calc(360deg * 75 / 100 - 180deg));
+            transform: rotate(calc(360deg * 75 / 100 - 180deg));
+  }
+}
+
+@keyframes rotateRight {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(calc(360deg * 75 / 100 - 180deg));
+            transform: rotate(calc(360deg * 75 / 100 - 180deg));
+  }
+}
+
+#skills .professional-container .circle-container .circle:after {
   content: "";
   width: 88px;
   height: 88px;
@@ -752,6 +883,80 @@ section {
   border-radius: 50%;
   -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
+}
+
+@-webkit-keyframes rotateProjectRight {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(calc(360deg * 85 / 100 - 180deg));
+            transform: rotate(calc(360deg * 85 / 100 - 180deg));
+  }
+}
+
+@keyframes rotateProjectRight {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(calc(360deg * 85 / 100 - 180deg));
+            transform: rotate(calc(360deg * 85 / 100 - 180deg));
+  }
+}
+
+#skills .professional-container .circle-container:nth-child(2) .circle .mask.right .fill {
+  -webkit-transform: rotate(calc(360deg * 85 / 100 - 180deg));
+          transform: rotate(calc(360deg * 85 / 100 - 180deg));
+  -webkit-animation: rotateProjectRight 3s linear;
+          animation: rotateProjectRight 3s linear;
+}
+
+@-webkit-keyframes rotateTeamRight {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(calc(360deg * 80 / 100 - 180deg));
+            transform: rotate(calc(360deg * 80 / 100 - 180deg));
+  }
+}
+
+@keyframes rotateTeamRight {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(calc(360deg * 80 / 100 - 180deg));
+            transform: rotate(calc(360deg * 80 / 100 - 180deg));
+  }
+}
+
+#skills .professional-container .circle-container:nth-child(3) .circle .mask.right .fill {
+  -webkit-transform: rotate(calc(360deg * 80 / 100 - 180deg));
+          transform: rotate(calc(360deg * 80 / 100 - 180deg));
+  -webkit-animation: rotateTeamRight 3s linear;
+          animation: rotateTeamRight 3s linear;
 }
 
 #skills #professional {
@@ -1252,6 +1457,9 @@ section {
   #contact .page-footer {
     margin-top: 20px;
   }
+  #contact .page-footer .social-media {
+    padding-left: 0px;
+  }
 }
 
 /* ------------------------ icons -------------------------- */
@@ -1373,7 +1581,7 @@ section {
           box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.08);
 }
 
-.light-mode #skills .circle:before {
+.light-mode #skills .professional-container .circle-container .circle:after {
   background-color: #fff;
 }
 
