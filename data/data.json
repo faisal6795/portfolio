@@ -148,7 +148,7 @@
                 "course": "Computer Engineering, ",
                 "name": "M. H. Saboo Siddik College, Byculla",
                 "year": "2013-2017",
-                "description": "Hi, my name is faisal ansari."
+                "description": ""
             },
             {
                 "course": "Junior College (Computer Science), ",
@@ -201,7 +201,7 @@
         "list_items": [
             {
                 "name": "All Categories",
-                "data_name": "*"
+                "data_name": ""
             },
             {
                 "name": "Apps",
@@ -219,7 +219,7 @@
         "list_cards": [
             {
                 "name": "Tic Tac Toe",
-                "url": "https://faisal6795.github.io/tictactoe",
+                "url": "/tictactoe",
                 "class_name": "game",
                 "img_class": "tictactoe",
                 "height": "350",
@@ -236,15 +236,6 @@
                 "desc": "App"
             },
             {
-                "name": "Snake",
-                "url": "https://faisal6795.github.io/snake",
-                "class_name": "game",
-                "img_class": "snake",
-                "height": "300",
-                "icon_class_name": "icon search",
-                "desc": "Game"
-            },
-            {
                 "name": "Sorting Algorithms",
                 "url": "",
                 "class_name": "visual",
@@ -252,6 +243,15 @@
                 "height": "240",
                 "icon_class_name": "icon search",
                 "desc": "Visual Illustration"
+            },
+            {
+                "name": "Snake",
+                "url": "/snake",
+                "class_name": "game",
+                "img_class": "snake",
+                "height": "300",
+                "icon_class_name": "icon search",
+                "desc": "Game"
             }
         ]
     },

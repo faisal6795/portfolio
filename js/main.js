@@ -15,6 +15,10 @@ function initialize() {
                 bindEvents();
                 initMap();
             }
+        }).done(function () {
+            if (index === length - 1) {
+                $("#loader").hide();
+            }
         });
     }
 
@@ -49,6 +53,8 @@ function initialize() {
             $(".project-nav-container li").removeClass("selected");
             $(event.target).addClass("selected");
             var filter = event.target.dataset.filter;
+            $(".project-cards").removeClass("hide-card");
+            filter !== "" ? $(".project-cards:not(." + filter + ")").addClass("hide-card") : null;
         });
 
         $(".toggle-btn").click(function (event) {
@@ -104,6 +110,18 @@ function initialize() {
                 showSuccess();
             } else {
                 showError();
+            }
+        });
+
+        document.addEventListener("scroll", function () {
+            var animateClass = "animate-on-scroll",
+                positionTech = $("#skills .container .progress")[0].getBoundingClientRect(),
+                positionProf = $("#skills .container .circle-container")[0].getBoundingClientRect();
+            if (positionTech.top + 100 < window.innerHeight && positionTech.bottom >= 50) {
+                $("#skills .container .progress .filled-bar").addClass(animateClass);
+            }
+            if (positionProf.top + 100 < window.innerHeight && positionProf.bottom >= 50) {
+                $("#skills .container .circle-container .circle .fill").addClass(animateClass);
             }
         });
     }
