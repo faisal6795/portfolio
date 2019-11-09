@@ -2,18 +2,31 @@
     <div id="education">
         <h2 class="heading">{{education_heading}}</h2>
         {{#each education}}<div class="card">
-            <span class="education-name">{{this.course}}</span><span class="education-from">{{this.name}}</span>
-            <div class="education-year year">{{this.year}}</div>
-            <p class="education-description">{{this.description}}</p>
+            <div class="inner-card">
+                <div class="card-front">
+                    <span class="education-name">{{this.course}}</span>
+                    <div class="education-year year">{{this.year}}</div>
+                </div>
+                <div class="card-back">
+                    <span class="education-from">{{this.name}}</span>
+                    <p class="education-description">{{this.description}}</p>
+                </div>
+            </div>
         </div>{{/each}}
     </div>
     <div id="work-experience">
         <h2 class="heading">{{experience_heading}}</h2>
         {{#each work}}<div class="card">
-            <span class="work-name">{{this.project}}</span><span class="work-from">{{this.company}}</span>
-            <div class="work-year year">{{this.year}}</div>
-            <span id="responsibility">{{this.responsibility}}</span>
-            <ul>{{#each responsibilities}}<li>{{this}}</li>{{/each}}</ul>
+            <div class="inner-card">
+                <div class="card-front">
+                    <span class="work-name">{{this.project}}</span><span class="work-from">{{this.company}}</span>
+                    <div class="work-year year">{{this.year}}</div>
+                </div>
+                <div class="card-back">
+                    <span id="responsibility">{{this.responsibility}}</span>
+                    <ul>{{#each responsibilities}}<li>{{this}}</li>{{/each}}</ul>
+                </div>
+            </div>
         </div>{{/each}}
     </div>
 </div>

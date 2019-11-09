@@ -10,10 +10,12 @@
             {{#each list_cards}}<div class="project-cards {{this.class_name}}" style="height: {{this.height}}px">
                 <a target="_blank" href="{{this.url}}">
                     <div class="img-container {{this.img_class}}"></div>
+                    <div class="hover-parent">
+                        <span class="card-icon {{this.icon_class_name}}"></span>
+                        <span class="card-name">{{this.name}}</span>
+                        <span class="card-description">{{this.desc}}</span>
+                    </div>
                 </a>
-                <span class="card-icon {{this.icon_class_name}}"></span>
-                <span class="card-name">{{this.name}}</span>
-                <span class="card-description">{{this.desc}}</span>
             </div>{{/each}}
             </ul>
         </div>

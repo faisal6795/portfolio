@@ -86,7 +86,7 @@ section {
   width: 100%;
   height: 100vh;
   z-index: 99;
-  background-color: #100e17;
+  background-color: #fff;
 }
 
 #loader div {
@@ -670,6 +670,7 @@ section {
   margin: 0;
   margin-bottom: 18px;
   line-height: 32px;
+  height: 65px;
 }
 
 #service .description {
@@ -1124,22 +1125,59 @@ section {
 
 #experience .card {
   margin-bottom: 30px;
-  padding: 26px 30px;
-  background-color: #202020;
-  -webkit-box-shadow: -7px 7px 20px #000;
-          box-shadow: -7px 7px 20px #000;
   font-size: 14px;
   font-weight: bold;
   border-radius: 4px;
+  background-color: transparent;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  height: 150px;
+}
+
+#experience .card:hover .inner-card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+#experience .card .inner-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #202020;
+  -webkit-box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.08);
   -webkit-transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
   transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
   transition: background-color 0.5s ease, box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+#experience .card .inner-card .card-front,
+#experience .card .inner-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 26px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #202026;
+}
+
+#experience .card .inner-card .card-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 #experience .education-name {
   font-size: 20px;
   font-weight: 600;
+  color: #2196f3;
 }
 
 #experience .education-from {
@@ -1155,7 +1193,7 @@ section {
 
 #experience .education-from,
 #experience .year {
-  color: #2196f3;
+  font-size: 19px;
 }
 
 #experience .work-name {
@@ -1171,11 +1209,13 @@ section {
 #experience ul,
 #experience li {
   list-style: inside;
+  font-size: 16px;
 }
 
 #experience #responsibility {
   margin-bottom: 8px;
   display: block;
+  font-size: 18px;
 }
 
 /* ------------------------ project -------------------------- */
@@ -1242,27 +1282,43 @@ section {
   transition: opacity 0.5s, width 0.5s, height 0.5s;
 }
 
-#project .project-cards-container .project-cards .card-name {
-  visibility: hidden;
+#project .project-cards-container .project-cards .hover-parent {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  height: calc(100% - 30px);
+  width: calc(100% - 30px);
+  background-color: rgba(0, 142, 255, 0.8);
+  border-radius: 10px;
+  color: #fff;
+  -webkit-clip-path: circle(0% at center);
+          clip-path: circle(0% at center);
+  -webkit-transition: -webkit-clip-path 0.7s ease;
+  transition: -webkit-clip-path 0.7s ease;
+  transition: clip-path 0.7s ease;
+  transition: clip-path 0.7s ease, -webkit-clip-path 0.7s ease;
+}
+
+#project .project-cards-container .project-cards .hover-parent .card-name {
   top: 50%;
   left: 0;
   width: 100%;
   position: absolute;
   font-weight: bold;
+  pointer-events: none;
 }
 
-#project .project-cards-container .project-cards .card-description {
-  visibility: hidden;
+#project .project-cards-container .project-cards .hover-parent .card-description {
   display: inline-block;
   position: absolute;
   top: calc(50% + 20px);
   width: 100%;
   left: 0;
   font-size: 14px;
+  pointer-events: none;
 }
 
-#project .project-cards-container .project-cards .card-icon {
-  visibility: hidden;
+#project .project-cards-container .project-cards .hover-parent .card-icon {
   height: 24px;
   width: 24px;
   display: inline-block;
@@ -1271,6 +1327,7 @@ section {
   top: calc(50% - 40px);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  pointer-events: none;
 }
 
 #project .project-cards-container .project-cards a {
@@ -1301,24 +1358,9 @@ section {
   background-image: url("../assets/snake.png");
 }
 
-#project .project-cards-container .project-cards:hover a:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #008eff;
-  border-radius: 10px;
-  opacity: 0.8;
-  margin: 15px;
-}
-
-#project .project-cards-container .project-cards:hover .card-name,
-#project .project-cards-container .project-cards:hover .card-description,
-#project .project-cards-container .project-cards:hover .card-icon {
-  pointer-events: none;
-  visibility: visible;
+#project .project-cards-container .project-cards a:hover .hover-parent {
+  -webkit-clip-path: circle(100% at center);
+          clip-path: circle(100% at center);
 }
 
 @media screen and (max-width: 767px) {
@@ -1390,10 +1432,15 @@ section {
   -webkit-box-shadow: -1rem 0 3rem #000;
           box-shadow: -1rem 0 3rem #000;
   background-color: #202026;
-  -webkit-transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
-  transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
-  transition: background-color 0.5s ease, box-shadow 0.5s ease;
-  transition: background-color 0.5s ease, box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease, -webkit-transform 0.5s ease;
+  transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease, -webkit-transform 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease, -webkit-box-shadow 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+#contact .reach-me .contact-card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #contact .reach-me .contact-card .card-icon {
@@ -1715,10 +1762,17 @@ section {
 }
 
 .light-mode #service .card,
-.light-mode #experience .card {
+.light-mode #experience .card .inner-card {
   background-color: #fff;
   -webkit-box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.08);
+}
+
+.light-mode #service .card .card-front,
+.light-mode #service .card .card-back,
+.light-mode #experience .card .inner-card .card-front,
+.light-mode #experience .card .inner-card .card-back {
+  background-color: #fff;
 }
 
 .light-mode #skills .professional-container .circle-container .circle:after {

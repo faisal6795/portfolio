@@ -12,8 +12,8 @@ function initialize() {
             $(target).html(template(jsonData));
         }, 'html').promise().done(function () {
             if (index === length - 1) {
-                bindEvents();
                 initMap();
+                bindEvents();
             }
         }).done(function () {
             if (index === length - 1) {
