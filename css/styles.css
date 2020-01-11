@@ -637,7 +637,22 @@ section {
   text-align: center;
 }
 
+#service #cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  #service #cards-container {
+    display: block;
+  }
+}
+
 #service .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: inline-block;
   vertical-align: top;
   padding: 20px;
@@ -662,6 +677,9 @@ section {
     width: 100%;
     margin-right: 0;
     margin-bottom: 30px;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
   }
 }
 
@@ -677,6 +695,7 @@ section {
   font-size: 14px;
   margin-bottom: 16px;
   line-height: 20px;
+  text-align: justify;
 }
 
 #service .icon-bg {
@@ -765,6 +784,29 @@ section {
           animation: fillBar1 3s linear;
 }
 
+@-webkit-keyframes fillBar5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes fillBar5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+#skills #technical .technical-container .progress:nth-child(2) .progress-bar .filled-bar.animate-on-scroll {
+  -webkit-animation: fillBar5 3s linear;
+          animation: fillBar5 3s linear;
+}
+
 @-webkit-keyframes fillBar1 {
   from {
     width: 0;
@@ -783,7 +825,7 @@ section {
   }
 }
 
-#skills #technical .technical-container .progress:nth-child(3) .progress-bar .filled-bar.animate-on-scroll {
+#skills #technical .technical-container .progress:nth-child(4) .progress-bar .filled-bar.animate-on-scroll {
   -webkit-animation: fillBar3 3s linear;
           animation: fillBar3 3s linear;
 }
@@ -806,7 +848,7 @@ section {
   }
 }
 
-#skills #technical .technical-container .progress:nth-child(4) .progress-bar .filled-bar.animate-on-scroll {
+#skills #technical .technical-container .progress:nth-child(5) .progress-bar .filled-bar.animate-on-scroll {
   -webkit-animation: fillBar4 3s linear;
           animation: fillBar4 3s linear;
 }
@@ -1084,6 +1126,7 @@ section {
 #experience .heading {
   font-size: 30px;
   margin-bottom: 60px;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -1167,6 +1210,19 @@ section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #202026;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #experience .card .inner-card .card-back {
@@ -1356,6 +1412,10 @@ section {
 
 #project .project-cards-container .project-cards a .img-container.snake {
   background-image: url("../assets/snake.png");
+}
+
+#project .project-cards-container .project-cards a .img-container.sorting {
+  background-image: url("../assets/sorting.png");
 }
 
 #project .project-cards-container .project-cards a:hover .hover-parent {
@@ -1566,6 +1626,7 @@ section {
   border: 0;
   color: #fff;
   cursor: pointer;
+  font-weight: bold;
   background-color: #2196f3;
 }
 

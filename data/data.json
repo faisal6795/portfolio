@@ -41,7 +41,7 @@
                 "text": "Nerul Navi Mumbai, Maharashtra, India"
             }
         ],
-        "image_url": "assets/pic.jpeg",
+        "image_url": "assets/pic.jpg",
         "image_alt_text": "profile image",
         "social": [
             {
@@ -65,6 +65,7 @@
         "description": "Hello, I am Faisal, frontend web developer based in Navi Mumbai. I have rich experience in web development, building web apps and customizations. Also I am good at",
         "languages": [
             "Javascript",
+            "React JS",
             "Angular",
             "BackboneJS",
             "HTML",
@@ -82,17 +83,17 @@
             {
                 "icon_class": "icon ui-icon",
                 "heading": "UI Development",
-                "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt."
+                "description": "People ignore design that ignores people. A UI development is like a joke, if you need to explain it, it isn't good. I have knowledge about various UI development techniques and implement proper coding guidelines. I have worked on many front end UI development projects and laid hands on different technologies. I am skilled in technologies such as Angular, React JS, Backbone JS, HTML5, CSS3, Handlebars JS. I have also interacted with our international clients via mails on a daily basis."
             },
             {
                 "icon_class": "icon code-icon",
                 "heading": "Web Development",
-                "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt."
+                "description": "I just want to make beautiful things even if nobody cares. I have focused on Web Development from the start and have a good amount of experience in it. I am currently working as a Senior Software Engineer in Zeus Learning, Parel. I manage the flow of the project and mentor other developers for Web Development. I am skilled in technologies like ASP.Net, SQL, Angular, React JS, Backbone JS, and many more. I have also conducted daily standup calls with our international clients independently."
             },
             {
                 "icon_class": "icon app-icon",
                 "heading": "App Development",
-                "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt."
+                "description": "The next big thing is the one that makes the last big thing usable. I made an Android app that monitors user's personal health records and gives out graphical statistical data. User can also customize the app based on their preferences. The name of the app is Curis and it is currently running live on the Google Play Store. This app was completely made by me in my freelancing period. I also developed an Android game for National Geographic Learning using Cordova and its name is Our World."
             }
         ]
     },
@@ -103,6 +104,10 @@
             {
                 "name": "Javascript",
                 "value": 85
+            },
+            {
+                "name": "React JS",
+                "value": 75
             },
             {
                 "name": "Angular",
@@ -148,50 +153,50 @@
                 "course": "Computer Engineering, ",
                 "name": "M. H. Saboo Siddik College of Engineering, Byculla",
                 "year": "2013-2017",
-                "description": ""
+                "description": "Scored 8.03 GPA out of 10"
             },
             {
                 "course": "Junior College (Computer Science), ",
                 "name": "MGM College, Nerul Navi Mumbai",
                 "year": "2011-2013",
-                "description": ""
+                "description": "Scored 84.00%"
             },
             {
                 "course": "High School, ",
                 "name": "St. Xavier's High School, Nerul Navi Mumbai",
                 "year": "2001-2011",
-                "description": ""
+                "description": "Scored 87.09%"
             }
         ],
         "work": [
             {
-                "project": "Annotate in ",
+                "project": "National Geographic Learning in ",
                 "company": "Zeus Learning",
                 "year": "2017-2018",
                 "responsibility": "Responsibility:",
                 "responsibilities": [
-                    "Validate CSS",
-                    "Project Management"
+                    "Created basic architecture of the project.",
+                    "Made responsive web books."
                 ]
             },
             {
-                "project": "Imagine Learning in ",
+                "project": "Discovery Education in ",
                 "company": "Zeus Learning",
                 "year": "2018",
                 "responsibility": "Responsibility:",
                 "responsibilities": [
-                    "Validate CSS",
-                    "Project Management"
+                    "Made Flip Card Interactives for PwC.",
+                    "Handled regular client emails independently."
                 ]
             },
             {
-                "project": "MC Graw Hill Education in ",
+                "project": "Mc Graw Hill Education in ",
                 "company": "Zeus Learning",
                 "year": "2018-2019",
                 "responsibility": "Responsibility:",
                 "responsibilities": [
-                    "Validate CSS",
-                    "Project Management"
+                    "Managed flow of the project.",
+                    "Mentored developers under this project"
                 ]
             }
         ]
@@ -239,10 +244,10 @@
                 "name": "Sorting Algorithms",
                 "url": "",
                 "class_name": "visual",
-                "img_class": "",
+                "img_class": "sorting",
                 "height": "240",
                 "icon_class_name": "icon search",
-                "desc": "Visual Illustration"
+                "desc": "Visual Illustration (Under development)"
             },
             {
                 "name": "Snake",
@@ -284,7 +289,7 @@
         "error_msg": "Did you fill the form properly?",
         "success_msg": "Message Sent!",
         "send_btn": "Send Message",
-        "copyright": "All rights reserved Faisal Ansari @ 2019",
+        "copyright": "All rights reserved Faisal Ansari @ 2020",
         "social_icons": [
             {
                 "icon_class": "icon github",

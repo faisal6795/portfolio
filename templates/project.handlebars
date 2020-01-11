@@ -8,7 +8,7 @@
         </div>
         <div class="project-cards-container">
             {{#each list_cards}}<div class="project-cards {{this.class_name}}" style="height: {{this.height}}px">
-                <a target="_blank" href="{{this.url}}">
+                <a {{#if url}}target="_blank" {{/if}} {{#if url}}href="{{this.url}}" {{/if}}>
                     <div class="img-container {{this.img_class}}"></div>
                     <div class="hover-parent">
                         <span class="card-icon {{this.icon_class_name}}"></span>

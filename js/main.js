@@ -58,11 +58,7 @@ function initialize() {
         });
 
         $(".toggle-btn").click(function (event) {
-            if ($(".nav-container ul").hasClass("nav-open")) {
-                closeNavBar();
-            } else {
-                openNavBar();
-            }
+            $(".nav-container ul").hasClass("nav-open") ? closeNavBar() : openNavBar();
         });
 
         $(".overlay").click(function (event) {
