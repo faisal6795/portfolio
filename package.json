@@ -1,0 +1,23 @@
+{
+	"name": "portfolio",
+	"version": "1.0.0",
+	"author": "Faisal Ansari",
+	"license": "ISC",
+	"description": "A digital portfolio that summarizes everything about my experiences and exposure to the practical world.",
+	"main": "gulpfile.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/faisal6795/portfolio.git"
+	},
+	"dependencies": {
+		"del": "^5.1.0",
+		"gulp": "^4.0.2",
+		"gulp-cli": "^2.3.0",
+		"gulp-csso": "^4.0.1",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-uglify": "^3.0.2"
+	}
+}
