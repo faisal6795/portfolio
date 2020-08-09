@@ -3,19 +3,19 @@
         "navbar",
         "home",
         "about",
+        "projects",
         "service",
         "skills",
         "experience",
-        "project",
         "contact"
     ],
     "navbar": {
         "links": [
             "home",
             "about",
+            "projects",
             "skills",
             "experience",
-            "project",
             "contact"
         ],
         "icon_class": "icon theme"
@@ -107,7 +107,7 @@
             },
             {
                 "name": "React JS",
-                "value": 75
+                "value": 80
             },
             {
                 "name": "Angular",
@@ -115,7 +115,7 @@
             },
             {
                 "name": "Android Development",
-                "value": 60
+                "value": 70
             },
             {
                 "name": "Web Development",
@@ -201,7 +201,7 @@
             }
         ]
     },
-    "project": {
+    "projects": {
         "title": "Recent Projects",
         "list_items": [
             {
@@ -219,6 +219,10 @@
             {
                 "name": "Visual Illustration",
                 "data_name": "visual"
+            },
+            {
+                "name": "Designs",
+                "data_name": "design"
             }
         ],
         "list_cards": [
@@ -227,8 +231,7 @@
                 "url": "/tictactoe",
                 "class_name": "game",
                 "img_class": "tictactoe",
-                "height": "350",
-                "icon_class_name": "icon search",
+                "height": 360,
                 "desc": "Game"
             },
             {
@@ -236,8 +239,7 @@
                 "url": "https://play.google.com/store/apps/details?id=com.faisalansari.curis&hl=en",
                 "class_name": "app",
                 "img_class": "curis",
-                "height": "240",
-                "icon_class_name": "icon search",
+                "height": 240,
                 "desc": "App"
             },
             {
@@ -245,8 +247,7 @@
                 "url": "",
                 "class_name": "visual",
                 "img_class": "sorting",
-                "height": "240",
-                "icon_class_name": "icon search",
+                "height": 240,
                 "desc": "Visual Illustration (Under development)"
             },
             {
@@ -254,8 +255,7 @@
                 "url": "/snake",
                 "class_name": "game",
                 "img_class": "snake",
-                "height": "300",
-                "icon_class_name": "icon search",
+                "height": 300,
                 "desc": "Game"
             }
         ]

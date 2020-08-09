@@ -191,6 +191,9 @@ section {
     display: block;
     margin: 10px 50px;
   }
+  #navbar .nav-container ul li:last-child {
+    display: none;
+  }
   #navbar .nav-container ul li a:hover, #navbar .nav-container ul li:hover {
     color: #fff;
   }
@@ -302,6 +305,10 @@ section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
+}
+
+.nav-container li:last-child {
+  display: none;
 }
 
 .nav-container li:hover {
@@ -784,29 +791,6 @@ section {
           animation: fillBar1 3s linear;
 }
 
-@-webkit-keyframes fillBar5 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 75%;
-  }
-}
-
-@keyframes fillBar5 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 75%;
-  }
-}
-
-#skills #technical .technical-container .progress:nth-child(2) .progress-bar .filled-bar.animate-on-scroll {
-  -webkit-animation: fillBar5 3s linear;
-          animation: fillBar5 3s linear;
-}
-
 @-webkit-keyframes fillBar1 {
   from {
     width: 0;
@@ -826,34 +810,16 @@ section {
 }
 
 #skills #technical .technical-container .progress:nth-child(4) .progress-bar .filled-bar.animate-on-scroll {
-  -webkit-animation: fillBar3 3s linear;
-          animation: fillBar3 3s linear;
-}
-
-@-webkit-keyframes fillBar3 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 60%;
-  }
-}
-
-@keyframes fillBar3 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 60%;
-  }
+  -webkit-animation: fillBar2 3s linear;
+          animation: fillBar2 3s linear;
 }
 
 #skills #technical .technical-container .progress:nth-child(5) .progress-bar .filled-bar.animate-on-scroll {
-  -webkit-animation: fillBar4 3s linear;
-          animation: fillBar4 3s linear;
+  -webkit-animation: fillBar2 3s linear;
+          animation: fillBar2 3s linear;
 }
 
-@-webkit-keyframes fillBar4 {
+@-webkit-keyframes fillBar2 {
   from {
     width: 0;
   }
@@ -862,7 +828,7 @@ section {
   }
 }
 
-@keyframes fillBar4 {
+@keyframes fillBar2 {
   from {
     width: 0;
   }
@@ -1275,18 +1241,22 @@ section {
 }
 
 /* ------------------------ project -------------------------- */
-#project .project-title {
+#projects {
+  padding-bottom: 0;
+}
+
+#projects .project-title {
   text-align: center;
   margin-bottom: 60px;
   font-size: 30px;
 }
 
-#project .project-nav-container {
+#projects .project-nav-container {
   text-align: center;
   margin-bottom: 50px;
 }
 
-#project .project-nav-container ul li {
+#projects .project-nav-container ul li {
   display: inline-block;
   margin: 0 10px;
   padding: 15px 10px;
@@ -1295,26 +1265,19 @@ section {
   cursor: pointer;
 }
 
-#project .project-nav-container ul li.selected {
+#projects .project-nav-container ul li.selected {
   border-bottom: 2px solid #2196f3;
 }
 
-#project .project-cards-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  height: 500px;
+#projects .project-cards-container {
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 0px;
+          column-gap: 0px;
 }
 
-#project .project-cards-container .project-cards {
+#projects .project-cards-container .project-cards {
+  display: inline-block;
   vertical-align: top;
   border-radius: 10px;
   position: relative;
@@ -1322,14 +1285,14 @@ section {
   color: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 33.3333%;
+  width: 100%;
   padding: 15px;
   opacity: 1;
   -webkit-transition: opacity 0.5s, width 0.5s, height 0.5s;
   transition: opacity 0.5s, width 0.5s, height 0.5s;
 }
 
-#project .project-cards-container .project-cards.hide-card {
+#projects .project-cards-container .project-cards.hide-card {
   height: 0 !important;
   opacity: 0;
   width: 0;
@@ -1338,7 +1301,7 @@ section {
   transition: opacity 0.5s, width 0.5s, height 0.5s;
 }
 
-#project .project-cards-container .project-cards .hover-parent {
+#projects .project-cards-container .project-cards .hover-parent {
   position: absolute;
   left: 15px;
   top: 15px;
@@ -1349,13 +1312,13 @@ section {
   color: #fff;
   -webkit-clip-path: circle(0% at center);
           clip-path: circle(0% at center);
-  -webkit-transition: -webkit-clip-path 0.7s ease;
-  transition: -webkit-clip-path 0.7s ease;
-  transition: clip-path 0.7s ease;
-  transition: clip-path 0.7s ease, -webkit-clip-path 0.7s ease;
+  -webkit-transition: -webkit-clip-path 0.5s ease;
+  transition: -webkit-clip-path 0.5s ease;
+  transition: clip-path 0.5s ease;
+  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
 }
 
-#project .project-cards-container .project-cards .hover-parent .card-name {
+#projects .project-cards-container .project-cards .hover-parent .card-name {
   top: 50%;
   left: 0;
   width: 100%;
@@ -1364,7 +1327,7 @@ section {
   pointer-events: none;
 }
 
-#project .project-cards-container .project-cards .hover-parent .card-description {
+#projects .project-cards-container .project-cards .hover-parent .card-description {
   display: inline-block;
   position: absolute;
   top: calc(50% + 20px);
@@ -1374,7 +1337,7 @@ section {
   pointer-events: none;
 }
 
-#project .project-cards-container .project-cards .hover-parent .card-icon {
+#projects .project-cards-container .project-cards .hover-parent .card-icon {
   height: 24px;
   width: 24px;
   display: inline-block;
@@ -1386,15 +1349,17 @@ section {
   pointer-events: none;
 }
 
-#project .project-cards-container .project-cards a {
+#projects .project-cards-container .project-cards a {
   height: 100%;
   width: 100%;
   background-color: #efefef;
   display: inline-block;
   border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
 
-#project .project-cards-container .project-cards a .img-container {
+#projects .project-cards-container .project-cards a .img-container {
   height: 100%;
   width: 100%;
   background-size: contain;
@@ -1402,63 +1367,55 @@ section {
   background-position: center;
 }
 
-#project .project-cards-container .project-cards a .img-container.tictactoe {
+#projects .project-cards-container .project-cards a .img-container.tictactoe {
   background-image: url("../assets/tictactoe.png");
 }
 
-#project .project-cards-container .project-cards a .img-container.curis {
+#projects .project-cards-container .project-cards a .img-container.curis {
   background-image: url("../assets/curis.png");
 }
 
-#project .project-cards-container .project-cards a .img-container.snake {
+#projects .project-cards-container .project-cards a .img-container.snake {
   background-image: url("../assets/snake.png");
 }
 
-#project .project-cards-container .project-cards a .img-container.sorting {
+#projects .project-cards-container .project-cards a .img-container.sorting {
   background-image: url("../assets/sorting.png");
 }
 
-#project .project-cards-container .project-cards a:hover .hover-parent {
+#projects .project-cards-container .project-cards a:hover .hover-parent {
   -webkit-clip-path: circle(100% at center);
           clip-path: circle(100% at center);
 }
 
-@media screen and (max-width: 767px) {
-  #project .project-cards-container .project-cards {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  #project .project-cards-container .project-cards {
-    width: 100%;
+@media screen and (min-width: 1440px) {
+  #projects .project-cards-container {
+    -webkit-column-count: 4;
+            column-count: 4;
   }
 }
 
 @media screen and (max-width: 767px) {
-  #project .project-cards-container {
-    height: 600px;
+  #projects .project-cards-container {
+    -webkit-column-count: 2;
+            column-count: 2;
   }
 }
 
 @media screen and (max-width: 575px) {
-  #project .project-cards-container {
-    height: auto;
-  }
-}
-
-@supports not (flex-wrap: wrap) {
-  #project .project-cards-container {
-    display: block;
-  }
-  #project .project-cards-container .project-cards {
-    display: inline-block;
-    vertical-align: top;
+  #projects .project-cards-container {
+    -webkit-column-count: 1;
+            column-count: 1;
   }
 }
 
 /* ------------------------ contact -------------------------- */
+#contact {
+  padding: 0 0 32px;
+}
+
 #contact .image-container {
+  display: none;
   background-image: url("../assets/map.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1658,11 +1615,11 @@ section {
   }
 }
 
-#contact .page-footer {
-  margin-top: 60px;
+.footer {
+  padding: 0 8%;
 }
 
-#contact .page-footer > * {
+.footer .page-footer > * {
   display: inline-block;
   width: 49%;
   -webkit-box-sizing: border-box;
@@ -1670,7 +1627,7 @@ section {
 }
 
 @media screen and (max-width: 767px) {
-  #contact .page-footer > * {
+  .footer .page-footer > * {
     width: 100%;
     padding: 0;
     text-align: center;
@@ -1678,35 +1635,37 @@ section {
   }
 }
 
-#contact .page-footer .copyright {
+.footer .page-footer .copyright {
   padding-left: 15px;
   font-size: 14px;
   opacity: 0.8;
 }
 
-#contact .page-footer .social-media {
+.footer .page-footer .social-media {
   padding-left: 22px;
+  text-align: right;
 }
 
-#contact .page-footer .social-media li {
+.footer .page-footer .social-media li {
   width: 16px;
   height: 16px;
   display: inline-block;
   margin-right: 20px;
 }
 
-#contact .page-footer .social-media a {
+.footer .page-footer .social-media a {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
 @media screen and (max-width: 767px) {
-  #contact .page-footer {
+  .footer .page-footer {
     margin-top: 20px;
   }
-  #contact .page-footer .social-media {
+  .footer .page-footer .social-media {
     padding-left: 0px;
+    text-align: center;
   }
 }
 
@@ -1882,8 +1841,8 @@ section {
 
 .light-mode #contact .contact-card {
   background-color: #fff;
-  -webkit-box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
 }
 
 .light-mode #contact .contact-form input,

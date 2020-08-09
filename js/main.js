@@ -1,4 +1,4 @@
-function initialize() {
+(function initialize() {
     var JSONData;
 
     $.getJSON("data/data.json", function (data) {
@@ -54,7 +54,7 @@ function initialize() {
             $(event.target).addClass("selected");
             var filter = event.target.dataset.filter;
             $(".project-cards").removeClass("hide-card");
-            filter !== "" ? $(".project-cards:not(." + filter + ")").addClass("hide-card") : null;
+            filter !== "" && $(".project-cards:not(." + filter + ")").addClass("hide-card");
         });
 
         $(".toggle-btn").click(function (event) {
@@ -123,15 +123,25 @@ function initialize() {
     }
 
     function initializeElements() {
-        var length = JSONData.sections.length;
-        JSONData.sections.forEach(function (data, index) {
-            renderTemplates(data, index, length, '#' + data, JSONData[data]);
-        });
+        $.getJSON('https://raw.githubusercontent.com/faisal6795/portfolio/master/data/codepen.json', (data => {
+            data.map(item => {
+                item.img_url = 'https://raw.githubusercontent.com/faisal6795/portfolio/master/assets/' + item.img_url;
+                item.height = Math.round(Math.random() * 120) + 240;
+                item.class_name = 'design';
+                item.desc = 'Design';
+            });
+            JSONData.projects.list_cards.push(...data);
+            var length = JSONData.sections.length;
+            JSONData.sections.forEach(function (data, index) {
+                renderTemplates(data, index, length, '#' + data, JSONData[data]);
+            });
+        }));
     }
 
     function initMap() {
+        return;
         var address = { lat: 19.043563, lng: 73.022391 };
         var map = new google.maps.Map(document.getElementById('map'), { zoom: 12, center: address });
         var marker = new google.maps.Marker({ position: address, map: map });
     }
-}
+})();
