@@ -12,7 +12,6 @@
             $(target).html(template(jsonData));
         }, 'html').promise().done(function () {
             if (index === length - 1) {
-                initMap();
                 bindEvents();
             }
         }).done(function () {
@@ -54,42 +53,6 @@
             }
         });
 
-        $("#send-button").click(function (event) {
-            var firstName = $(".contact-first-name input").val(),
-                lastName = $(".contact-last-name input").val(),
-                email = $(".contact-email input").val(),
-                msg = $(".contact-msg textarea").val(),
-                name = firstName + " " + lastName,
-                isValid = function (firstName, lastName, email, msg) {
-                    return firstName.trim() !== "" && lastName.trim() !== "" && msg.trim() !== "" && /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
-                },
-                showError = function () {
-                    $(".submit-msg").text(JSONData.contact.error_msg);
-                    $(".submit-msg").removeClass("hide").removeClass("correct");
-                },
-                showSuccess = function () {
-                    $(".contact-form > div > *[required]").val("");
-                    $(".submit-msg").text(JSONData.contact.success_msg);
-                    $(".submit-msg").removeClass("hide").addClass("correct");
-                };
-            if (isValid(firstName, lastName, email, msg)) {
-                Email.send({
-                    Host: "smtp.gmail.com",
-                    Username: "faisal.faizansari@gmail.com",
-                    Password: "rmfdxngxiqltrybp",
-                    To: "faisal.faizansari@gmail.com",
-                    From: email,
-                    Subject: "Message from " + name,
-                    Body: msg
-                }).then(function (message) {
-                    console.log(message);
-                });
-                showSuccess();
-            } else {
-                showError();
-            }
-        });
-
         document.addEventListener("scroll", function () {
             var animateClass = "animate-on-scroll",
                 positionTech = $("#skills .container .progress")[0].getBoundingClientRect(),
@@ -117,12 +80,5 @@
                 renderTemplates(data, index, length, '#' + data, JSONData[data]);
             });
         }));
-    }
-
-    function initMap() {
-        return;
-        var address = { lat: 19.043563, lng: 73.022391 };
-        var map = new google.maps.Map(document.getElementById('map'), { zoom: 12, center: address });
-        var marker = new google.maps.Marker({ position: address, map: map });
     }
 })();

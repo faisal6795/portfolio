@@ -217,6 +217,7 @@ section {
   }
   #navbar .nav-container ul li i {
     position: absolute;
+    display: inline-block;
     top: 12px;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -261,6 +262,7 @@ section {
 }
 
 .nav-container li a {
+  display: inline-block;
   text-transform: capitalize;
   height: 40px;
   line-height: 40px;
@@ -272,6 +274,10 @@ section {
   .nav-container li a {
     font-size: 14px;
   }
+}
+
+.nav-container li i {
+  display: none;
 }
 
 .nav-container li.selected {
@@ -1374,210 +1380,9 @@ section {
   padding: 0 0 32px;
 }
 
-#contact .image-container {
-  display: none;
-  background-image: url("../assets/map.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  background-position: center center;
-}
-
-#contact .image-container .container {
-  padding-top: 50px;
-}
-
-#contact .contact-title {
-  font-size: 30px;
-  margin-bottom: 60px;
-  text-align: center;
-}
-
-#contact .reach-me {
-  margin-bottom: 60px;
-}
-
-#contact .reach-me .contact-card {
-  display: inline-block;
-  width: calc(33% - 30px);
-  margin: 0 15px 30px;
-  height: 286px;
-  text-align: center;
-  padding: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: -1rem 0 3rem #000;
-          box-shadow: -1rem 0 3rem #000;
-  background-color: #202026;
-  -webkit-transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease, -webkit-transform 0.5s ease;
-  transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease, -webkit-transform 0.5s ease;
-  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
-  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease, -webkit-box-shadow 0.5s ease, -webkit-transform 0.5s ease;
-}
-
-#contact .reach-me .contact-card:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-#contact .reach-me .contact-card .card-icon {
-  width: 100px;
-  height: 100px;
-  border: 1px solid #2196f3;
-  margin: 0 auto;
-  border-radius: 50%;
-  margin-bottom: 45px;
-  position: relative;
-}
-
-#contact .reach-me .contact-card .card-icon .icon {
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  -webkit-transition: background-image 0.5s ease;
-  transition: background-image 0.5s ease;
-}
-
-#contact .reach-me .contact-card .card-title {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-#contact .reach-me .contact-card .card-desc {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 14px;
-}
-
-@media screen and (max-width: 767px) {
-  #contact .reach-me .contact-card {
-    width: 100%;
-    margin: 0 0 30px;
-  }
-}
-
-#contact .contact-form {
-  display: inline-block;
-  width: 50%;
-  vertical-align: middle;
-}
-
-#contact .contact-form > * {
-  width: 100%;
-  padding: 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#contact .contact-form .contact-first-name,
-#contact .contact-form .contact-last-name {
-  display: inline-block;
-  width: calc(50% - 3px);
-}
-
-#contact .contact-form input {
-  padding: 20px;
-  border-radius: 0.25rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 1px solid #ced4da;
-  background-color: transparent;
-  width: 100%;
-  font-size: 16px;
-  height: 50px;
-  line-height: 50px;
-  color: #fff;
-}
-
-@media screen and (max-width: 480px) {
-  #contact .contact-form input {
-    font-size: 14px;
-    padding: 14px;
-  }
-}
-
-#contact .contact-form textarea {
-  background-color: transparent;
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid #ced4da;
-  padding: 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 16px;
-  font-family: Arial;
-  color: #fff;
-}
-
-@media screen and (max-width: 480px) {
-  #contact .contact-form textarea {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
-
-#contact .contact-form .submit-msg {
-  padding: 0;
-  font-size: 22px;
-  line-height: 30px;
-  text-align: center;
-  font-weight: bold;
-  color: #dc3545;
-}
-
-#contact .contact-form .submit-msg.correct {
-  color: #28a745;
-}
-
-#contact .contact-form .contact-send-button button {
-  width: 100%;
-  line-height: 1.5;
-  font-size: 16px;
-  padding: 8px 30px;
-  border-radius: 20px;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  font-weight: bold;
-  background-color: #2196f3;
-}
-
-@media screen and (max-width: 767px) {
-  #contact .contact-form {
-    width: 100%;
-  }
-}
-
-#contact .map-container {
-  display: inline-block;
-  width: 49%;
-  vertical-align: middle;
-  padding-left: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#contact .map-container #map {
-  height: 400px;
-  -webkit-box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.08);
-}
-
-@media screen and (max-width: 767px) {
-  #contact .map-container {
-    width: 100%;
-    padding: 20px 10px;
-  }
-}
-
 @media screen and (max-width: 767px) {
   #contact {
-    padding-bottom: 92px;
+    padding: 0 0 80px;
   }
 }
 
@@ -1776,17 +1581,6 @@ section {
 
 .light-mode #home .social li:hover .linkedin {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABmUlEQVRIS+3Wu4/NURDA8c94JIhEKEQhRKlRSlAuHQkKBY1KotII8Yp4ZQudKCg1bLfCVhKVeNUSnUXlHxAK1shsfj85ufG6e++qTHfmnJnvyZwzj4DMXIWzOIzNWFL6Bcg3vMddXIuIz5GZK/EYOxbg8HcmzzFRgKs4N2bnvbsrBZjFlkUCzBbgK5Z2gI84gqfYjntYMwJ8rgDZOLgRESf6dWZex8kRAAYBdyLiaAO4jWPjBMzhMp5gFy5i2TgBo/j6qe1giF7gQnPyEnZ2utorWYebOIUH+IRtOI99g5RBwExE/DiUmdPYX4YRMdNl/VpsjIhXrbPMDEzhUKsfGtB8gPV1+4iorz0vmbkJb9tSsyBAZp7GZBeeiYh42UBeY2u/HhqQmStQt+6T81ZEHG8Aj7BnFMAGfGjiPB0RBxvAQ+wdJ+B+RBz4D2jzYPAN/hiitlz/TaINA5gv123D+dJ9wf7NVmN5p6u9kurXbY/4lU2dffNPWuZiNf1n2F0FqmpIQc507bLGlj5Lhy3f1U/edWPLZI0t3wHjniGfOg6x1wAAAABJRU5ErkJggg==");
-}
-
-.light-mode #contact .contact-card {
-  background-color: #fff;
-  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
-}
-
-.light-mode #contact .contact-form input,
-.light-mode #contact .contact-form textarea {
-  color: #222;
 }
 
 .light-mode .email {
