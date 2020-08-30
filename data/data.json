@@ -11,12 +11,22 @@
     ],
     "navbar": {
         "links": [
-            "home",
-            "about",
-            "projects",
-            "skills",
-            "experience",
-            "contact"
+            {
+                "name": "home",
+                "class": "fas fa-home"
+            },
+            {
+                "name": "projects",
+                "class": "fas fa-trophy"
+            },
+            {
+                "name": "skills",
+                "class": "fas fa-rocket"
+            },
+            {
+                "name": "experience",
+                "class": "fas fa-certificate"
+            }
         ],
         "icon_class": "icon theme"
     },
@@ -202,7 +212,7 @@
         ]
     },
     "projects": {
-        "title": "Recent Projects",
+        "title": "Projects",
         "list_items": [
             {
                 "name": "All Categories",

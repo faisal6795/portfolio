@@ -23,16 +23,6 @@
     }
 
     function bindEvents() {
-        var openNavBar = function () {
-            $(".nav-container ul").addClass("nav-open");
-            $(".overlay").addClass("active");
-            $(".toggle-btn").addClass("close-btn");
-        }, closeNavBar = function () {
-            $(".nav-container ul").removeClass("nav-open");
-            $(".overlay").removeClass("active");
-            $(".toggle-btn").removeClass("close-btn");
-        };
-
         $("#navbar .navlink").click(function (event) {
             $("#navbar .navlink").closest("li").removeClass("selected");
             $(event.target).closest("li").addClass("selected");
@@ -46,7 +36,6 @@
                     window.location.hash = hash;
                 });
             }
-            closeNavBar();
         });
 
         $(".project-nav-container li").click(function (event) {
@@ -55,14 +44,6 @@
             var filter = event.target.dataset.filter;
             $(".project-cards").removeClass("hide-card");
             filter !== "" && $(".project-cards:not(." + filter + ")").addClass("hide-card");
-        });
-
-        $(".toggle-btn").click(function (event) {
-            $(".nav-container ul").hasClass("nav-open") ? closeNavBar() : openNavBar();
-        });
-
-        $(".overlay").click(function (event) {
-            closeNavBar();
         });
 
         $("#navbar .theme-changer button").click(function (event) {
