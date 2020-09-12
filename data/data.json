@@ -28,7 +28,8 @@
                 "class": "fas fa-certificate"
             }
         ],
-        "icon_class": "icon theme"
+        "icon_class_dark": "fas fa-sun dark",
+        "icon_class_light": "fas fa-moon light"
     },
     "home": {
         "hello": "Hello I'm",
@@ -36,17 +37,17 @@
         "position": "Frontend Developer",
         "details": [
             {
-                "class": "icon email",
+                "class": "fas fa-envelope",
                 "link": "mailto:faisal.faiz.ansari@gmail.com",
                 "text": "faisal.faiz.ansari@gmail.com"
             },
             {
-                "class": "icon phone",
+                "class": "fas fa-phone-alt",
                 "link": "callto:+918976513089",
                 "text": "+91 89765 13089"
             },
             {
-                "class": "icon location",
+                "class": "fas fa-map-marker-alt",
                 "link": "https://goo.gl/maps/E94R9TG9UUuimdGR7",
                 "text": "Nerul Navi Mumbai, Maharashtra, India"
             }
@@ -55,16 +56,24 @@
         "image_alt_text": "profile image",
         "social": [
             {
-                "class": "icon github",
+                "title": "Github",
+                "class": "fab fa-github",
                 "link": "https://github.com/faisal6795"
             },
             {
-                "class": "icon insta",
-                "link": "https://www.instagram.com/thefaisalansari/"
+                "title": "Codepen",
+                "class": "fab fa-codepen",
+                "link": "https://codepen.io/faisalansari"
             },
             {
-                "class": "icon linkedin",
+                "title": "Linkedin",
+                "class": "fab fa-linkedin-in",
                 "link": "https://www.linkedin.com/in/faisal-ansari/"
+            },
+            {
+                "title": "Instagram",
+                "class": "fab fa-instagram",
+                "link": "https://www.instagram.com/thefaisalansari/"
             }
         ]
     },
@@ -85,7 +94,7 @@
         "download_link": "/assets/cv.pdf",
         "download_text": "Faisal Ansari CV",
         "download_btn": "Download CV",
-        "download_icon_class": "icon download"
+        "download_icon_class": "fas fa-cloud-download-alt"
     },
     "service": {
         "title": "What I do",
@@ -274,16 +283,24 @@
         "copyright": "All rights reserved Faisal Ansari @ 2020",
         "social_icons": [
             {
-                "icon_class": "icon github",
+                "title": "Github",
+                "icon_class": "fab fa-github",
                 "link": "https://github.com/faisal6795"
             },
             {
-                "icon_class": "icon insta",
-                "link": "https://www.instagram.com/thefaisalansari/"
+                "title": "Codepen",
+                "icon_class": "fab fa-codepen",
+                "link": "https://codepen.io/faisalansari"
             },
             {
-                "icon_class": "icon linkedin",
+                "title": "Linkedin",
+                "icon_class": "fab fa-linkedin-in",
                 "link": "https://www.linkedin.com/in/faisal-ansari/"
+            },
+            {
+                "title": "Instagram",
+                "icon_class": "fab fa-instagram",
+                "link": "https://www.instagram.com/thefaisalansari/"
             }
         ]
     }
