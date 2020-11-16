@@ -1,11 +1,9 @@
 body {
   margin: 0;
-  background-color: #100e17;
   color: #fff;
   font-family: "Montserrat", sans-serif;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  overflow: overlay;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -14,6 +12,10 @@ body {
 
 body::-webkit-scrollbar {
   width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -165,9 +167,10 @@ section {
 }
 
 #portfolio {
+  background-color: #100e17;
   min-width: 360px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: background-color 0.3s ease, all 0.5s ease;
+  transition: background-color 0.3s ease, all 0.5s ease;
 }
 
 /* ---------------------navbar----------------- */
@@ -225,6 +228,7 @@ section {
   }
   #navbar .nav-container ul li a {
     height: 100%;
+    min-width: 100%;
     display: block;
     line-height: 85px;
   }
@@ -265,6 +269,7 @@ section {
   display: inline-block;
   text-transform: capitalize;
   height: 40px;
+  min-width: 100px;
   line-height: 40px;
   font-size: 18px;
   font-weight: bold;
@@ -403,7 +408,7 @@ section {
 }
 
 #home .info {
-  width: 50%;
+  width: 52%;
 }
 
 @media screen and (max-width: 767px) {
@@ -450,6 +455,7 @@ section {
   text-align: center;
   margin: 10px;
   margin-left: 0;
+  border-radius: 4px;
   position: relative;
 }
 
@@ -467,13 +473,12 @@ section {
 #home .profile-pic {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 49%;
+  width: 48%;
   text-align: center;
   padding-top: 60px;
 }
 
 #home .profile-pic .img-border {
-  border: 20px solid rgba(0, 0, 0, 0.9);
   border-radius: 50%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -484,7 +489,6 @@ section {
 
 #home .profile-pic .img-border .image {
   border-radius: 50%;
-  border: 20px solid rgba(0, 0, 0, 0.4);
   height: 100%;
   width: 100%;
   max-width: 350px;
@@ -517,7 +521,7 @@ section {
 }
 
 #about .container > * {
-  width: 49%;
+  width: 50%;
   display: inline-block;
   vertical-align: middle;
 }
@@ -557,7 +561,7 @@ section {
 
 #about .prog-languages ul li {
   display: inline-block;
-  padding: 4px 10px;
+  padding: 6px 12px;
   margin: 0px 6px 10px;
   border: 2px solid #2196f3;
   border-radius: 6px;
@@ -578,7 +582,6 @@ section {
   background-color: #2196f3;
   border-radius: 24px;
   border: none;
-  color: #fff;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
@@ -587,6 +590,7 @@ section {
 #about .download-btn a > * {
   display: inline-block;
   vertical-align: top;
+  color: #fff;
 }
 
 #about .download-btn a i {
@@ -1022,10 +1026,6 @@ section {
           animation: rotateTeamRight 3s linear;
 }
 
-#skills #professional {
-  width: 49%;
-}
-
 #skills #professional .value {
   line-height: 100px;
   position: relative;
@@ -1087,7 +1087,6 @@ section {
 }
 
 #experience #work-experience {
-  width: 49%;
   padding-left: 30px;
 }
 
@@ -1389,7 +1388,7 @@ section {
 
 .footer .page-footer > * {
   display: inline-block;
-  width: 49%;
+  width: 50%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1406,7 +1405,6 @@ section {
 .footer .page-footer .copyright {
   padding-left: 15px;
   font-size: 14px;
-  opacity: 0.8;
 }
 
 .footer .page-footer .social-media {
@@ -1455,69 +1453,61 @@ section {
 }
 
 /* --------------------------------- light mode -------------------------------------- */
-.light-mode {
+#portfolio.light-mode {
   color: #222;
   background-color: #fff;
 }
 
-.light-mode a,
-.light-mode .nav-container {
+#portfolio.light-mode a,
+#portfolio.light-mode .nav-container {
   color: #222;
 }
 
-.light-mode #navbar .nav-container {
+#portfolio.light-mode #navbar .nav-container {
   background-color: #fff;
 }
 
-.light-mode #navbar .nav-container li.selected {
+#portfolio.light-mode #navbar .nav-container li.selected {
   border-color: #2196f3;
 }
 
-.light-mode #navbar .nav-container .theme-changer button {
+#portfolio.light-mode #navbar .nav-container .theme-changer button {
   background-color: #000;
   color: #fff;
 }
 
-.light-mode #navbar .nav-container .theme-changer .dark {
+#portfolio.light-mode #navbar .nav-container .theme-changer .dark {
   display: none;
 }
 
-.light-mode #navbar .nav-container .theme-changer .light {
+#portfolio.light-mode #navbar .nav-container .theme-changer .light {
   display: inline-block;
 }
 
-.light-mode #service .card,
-.light-mode #experience .card .inner-card {
+#portfolio.light-mode #service .card,
+#portfolio.light-mode #experience .card .inner-card {
   background-color: #fff;
   -webkit-box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 10px 20px 4px rgba(0, 0, 0, 0.08);
 }
 
-.light-mode #service .card .card-front,
-.light-mode #service .card .card-back,
-.light-mode #experience .card .inner-card .card-front,
-.light-mode #experience .card .inner-card .card-back {
+#portfolio.light-mode #service .card .card-front,
+#portfolio.light-mode #service .card .card-back,
+#portfolio.light-mode #experience .card .inner-card .card-front,
+#portfolio.light-mode #experience .card .inner-card .card-back {
   background-color: #fff;
 }
 
-.light-mode #skills .professional-container .circle-container .circle:after {
+#portfolio.light-mode #skills .professional-container .circle-container .circle:after {
   background-color: #fff;
 }
 
-.light-mode #home .profile-pic .img-border {
-  border: 20px solid rgba(0, 0, 0, 0.17);
-}
-
-.light-mode #home .profile-pic .img-border .image {
-  border: 20px solid rgba(0, 0, 0, 0.07);
-}
-
-.light-mode #home .social li {
+#portfolio.light-mode #home .social li {
   background: #fff;
   color: #222;
 }
 
-.light-mode #home .social li:hover a {
+#portfolio.light-mode #home .social li:hover a {
   background: #000;
   color: #fff;
 }

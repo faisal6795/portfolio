@@ -37,7 +37,7 @@
             }
         });
 
-        $(".project-nav-container li").click(function (event) {
+        $("#projects").on("click", ".project-nav-container li", function (event) {
             $(".project-nav-container li").removeClass("selected");
             $(event.target).addClass("selected");
             var filter = event.target.dataset.filter;
